@@ -40,31 +40,47 @@
     <!-- JSON-LD conforming to Google Structured Data specification. -->
     <script type="application/ld+json">
     {
-      "@context" : "http://schema.org",
-      "@type" : "Dataset",
-      "name" : "British Triathlon Events",
-      "id": "http://data.britishtriathlon.org/",
+      "@context": [
+        "https://schema.org/",
+        "https://openactive.io/"
+      ],
+      "@type": "Dataset",
+      "@id": "http://data.britishtriathlon.org/",
       "url": "http://data.britishtriathlon.org/",
-      "description" : "Event data from britishtriathlon.org; published using OpenActive RPDE v1.0.",
+      "name": "British Triathlon Events",
+      "description": "Event data from britishtriathlon.org; published using OpenActive RPDE v1.0.",
       "keywords":[
-         "Triathlon",
-         "GO TRI",
-         "OpenActive"
+          "Triathlon",
+          "GO TRI",
+          "OpenActive"
       ],
       "license" : "https://creativecommons.org/licenses/by/4.0/",
-      "distribution" : {
-        "@type" : "DataDownload",
-        "encodingFormat" : "application/vnd.openactive.rpde+json; version=1.0",
-        "contentUrl" : "https://api.britishtriathlon.org/openactive/v1/events"
-      },
-      "inLanguage": "en-GB",
+      "distribution": [
+        {
+          "@type" : "DataDownload",
+          "encodingFormat" : "application/vnd.openactive.rpde+json; version={rpdeversion}",
+          "contentUrl" : "https://api.britishtriathlon.org/openactive/v1/events"
+        }
+      ],
+      "discussionUrl": "https://github.com/britishtriathlon/openactive/issues",
+      "documentation": "https://github.com/britishtriathlon/openactive",
+      "inLanguage": [
+        "en-GB"
+      ],
       "publisher": {
-         "@type": "Organization", 
-         "name": "British Triathlon",
-         "url": "https://www.britishtriathlon.org",
-         "logo": "http://data.britishtriathlon.org/images/logo.png"
+        "@type": "Organization",
+        "name": "British Triathlon",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "http://data.britishtriathlon.org/images/logo.png"
+        },
+        "url": "https://www.britishtriathlon.org"
       },
-      "datePublished" : "2018-07-04T00:00:00.000Z"
+      "datePublished": "2018-07-04T00:00:00.000Z",
+      "backgroundImage": {
+        "@type": "ImageObject",
+        "url": "http://data.britishtriathlon.org/images/bg.jpg"
+      }
     }
     </script>
   </head>
